@@ -15,32 +15,32 @@ export default class Form extends React.Component {
 
 
 	handleChangename=event =>{
-		console.log(event.target.value);
+
 		this.setState({name: event.target.value});
 	};
 
 	handleChangerollno=event =>{
-		console.log(event.target.value);
+
 		this.setState({rollno: event.target.value});
 	};
 
 	handleChangephone=event =>{
-		console.log(event.target.value);
+
 		this.setState({phone: event.target.value});
 	};
 
 	handleChangeemail=event =>{
-		console.log(event.target.value);
+
 		this.setState({email: event.target.value});
 	};
 
 	handleChangepassword=event =>{
-		console.log(event.target.value);
+
 		this.setState({password: event.target.value});
 	};
 
 	handleChangeconfirmpassword=event =>{
-		console.log(event.target.value);
+
 		this.setState({confirmpassword: event.target.value});
 	};
 
