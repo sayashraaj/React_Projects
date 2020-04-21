@@ -20,4 +20,4 @@ the endponit obtained from the second endpoint gives the next endpoint for a lis
 
 This is my React App, my Saarang DevOps app, and I hope you like the result of five days of hardwork I have put into making the project, learning react from scratch
 
-I really want to be the Saarang DevOps coordinator as the work done in DevOps is my passion
+I really want to be the Saarang DevOps coordinator as I am passionate about Web and Mobile operations
