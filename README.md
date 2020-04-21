@@ -18,6 +18,6 @@ When validation is successful, it redirects to a new page '/FetchRandomUser' whe
 the endpoint obtained from the first endpoint gives the next .treasure value tvseriesname
 the endponit obtained from the second endpoint gives the next endpoint for a list which is stored and displayed using a 'map' function in cards I created using only div tags
 
-This is my React App, my Saarang DevOps app, and I hope you like my five day's worth of hardwork, learning react from scratch
+This is my React App, my Saarang DevOps app, and I hope you like the result of five days of hardwork I have put into making the project, learning react from scratch
 
 I really want to be the Saarang DevOps coordinator
