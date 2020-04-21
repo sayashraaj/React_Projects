@@ -5,7 +5,8 @@
 Using React, I have made a React App which meets all the requirements asked for in the application for Saarang DevOps Coord
 
 The app has form, which validates:
--Name
+	
+- Name
 - Roll Number
 - Contact Number (checks for 10 digits) 
 - Email ID (checks for smail ID using '@smail.iitm.ac.in')
