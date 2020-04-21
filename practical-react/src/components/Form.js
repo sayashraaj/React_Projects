@@ -84,6 +84,7 @@ export default class Form extends React.Component {
 			console.log(this.state);
 			//clear form
 			this.setState(initialState);
+			this.props.history.push('/FetchRandomUser');			//redirect to next task
 		}
 	};
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
-// import FetchRandomUser from "./components/FetchRandomUser";
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import FetchRandomUser from "./components/FetchRandomUser";
 import Form from "./components/Form";
 class App extends React.Component {
   state = {
@@ -10,8 +11,11 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        Forme
-        <Form />
+      Saarang DevOps App: Sayash Raaj CE19B113
+      	<BrowserRouter>
+		<Route path="/" component={Form} exact/>
+       	<Route path="/FetchRandomUser" component={FetchRandomUser}/>
+       	</BrowserRouter>
       </div>
     );
   }
