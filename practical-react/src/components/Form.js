@@ -11,7 +11,6 @@ export default class Form extends React.Component {
 		password: "",
 		confirmpassword: ""
 	};
-
 	handleChangename=event =>{
 		console.log(event.target.value);
 		this.setState({name: event.target.value});
@@ -42,7 +41,31 @@ export default class Form extends React.Component {
 		this.setState({confirmpassword: event.target.value});
 	};
 
-	handleSubmit=()=>{console.log(this.state);};
+	validate=()=>{
+		let phoneError="";
+		let emailError="";
+		let confirmpasswordError="";
+
+		if(!this.state.email.includes('@smail.iitm.ac.in')) {
+			emailError="invalid smail";
+		}
+
+		if(emailError) {
+			this.setState({emailError});
+			return false;
+		}
+
+		return true;
+	};
+
+
+	handleSubmit=()=>{
+		const isValid=this.validate();
+		if(isValid){
+			console.log(this.state);
+		}
+	};
+
 
 	render(){
 		return(
@@ -51,6 +74,7 @@ export default class Form extends React.Component {
 			<div><input name="rollno" placeholder="roll number" value={this.state.rollno} onChange={this.handleChangerollno} /></div>
 			<div><input name="phone" placeholder="phone no" value={this.state.phone} onChange={this.handleChangephone} /></div>
 			<div><input name="email" placeholder="email id" value={this.state.email} onChange={this.handleChangeemail} /></div>
+			<div style={{fontSize: 12, color: "red"}}> {this.state.emailError}</div>
 			<div><input name="password" placeholder="password" type="password" value={this.state.password} onChange={this.handleChangepassword} /></div>
 			<div><input name="confirmpassword" placeholder="confirmpassword" value={this.state.confirmpassword} onChange={this.handleChangeconfirmpassword} /></div>
 			<div><button onClick={this.handleSubmit}>Submit</button></div>
