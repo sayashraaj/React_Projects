@@ -1,5 +1,6 @@
 import React from "react";
-
+import '../skeleton.css';
+import '../normalize.css';
 export default class FetchRandomUser extends React.Component {
   state = {
     loading: true,
@@ -25,7 +26,7 @@ export default class FetchRandomUser extends React.Component {
     const data2 = await response2.json();
     const listing = data2.map(name=>{
       return (
-        <li>{name.name} : {name.description}</li>
+        <li><div>{name.name} : {name.description}</div></li>
         )
     });
     this.setState({listofnames: listing, loading: false});

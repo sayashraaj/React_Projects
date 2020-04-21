@@ -1,5 +1,7 @@
 import React from 'react';
 import '../App.css';
+import '../skeleton.css';
+import '../normalize.css';
 
 const initialState = {			//reset to initial
 	name: "",
@@ -7,7 +9,10 @@ const initialState = {			//reset to initial
 	phone: "",
 	email: "",
 	password: "",
-	confirmpassword: ""
+	confirmpassword: "",
+	phoneError: "",
+	emailError: "",
+	confirmpasswordError: ""
 }
 export default class Form extends React.Component {
 
@@ -15,7 +20,6 @@ export default class Form extends React.Component {
 
 
 	handleChangename=event =>{
-
 		this.setState({name: event.target.value});
 	};
 
@@ -35,7 +39,6 @@ export default class Form extends React.Component {
 	};
 
 	handleChangepassword=event =>{
-
 		this.setState({password: event.target.value});
 	};
 
@@ -66,6 +69,7 @@ export default class Form extends React.Component {
 
 		if(this.state.password!==this.state.confirmpassword) {
 			confirmpasswordError="password does not match";
+
 		}
 		if(confirmpasswordError) {
 			this.setState({confirmpasswordError});
@@ -87,11 +91,13 @@ export default class Form extends React.Component {
 			this.setState(initialState);
 			this.props.history.push('/FetchRandomUser');			//redirect to next task
 		}
+
 	};
 
 
 	render(){
 		return(
+			
 			<div>
 			<div><input name="name" placeholder="name" value={this.state.name} onChange={this.handleChangename} /></div>
 			<div><input name="rollno" placeholder="roll number" value={this.state.rollno} onChange={this.handleChangerollno} /></div>
@@ -100,9 +106,10 @@ export default class Form extends React.Component {
 			<div><input name="email" placeholder="email id" value={this.state.email} onChange={this.handleChangeemail} /></div>
 			<div style={{fontSize: 12, color: "red"}}> {this.state.emailError}</div>
 			<div><input name="password" placeholder="password" type="password" value={this.state.password} onChange={this.handleChangepassword} /></div>
-			<div><input name="confirmpassword" placeholder="confirmpassword" value={this.state.confirmpassword} onChange={this.handleChangeconfirmpassword} /></div>
+			<div><input name="confirmpassword" placeholder="confirmpassword" type="password" value={this.state.confirmpassword} onChange={this.handleChangeconfirmpassword} /></div>
 			<div style={{fontSize: 12, color: "red"}}> {this.state.confirmpasswordError}</div>
-			<div><button onClick={this.handleSubmit}>Submit</button></div>
+			<div><button class="button-primary" onClick={this.handleSubmit}>Submit</button></div>
+
 			</div>
 			);
 	}
