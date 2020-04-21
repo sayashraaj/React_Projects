@@ -55,6 +55,7 @@ export default class Form extends React.Component {
 		if(phoneError) {
 			this.setState({phoneError});
 			return false;
+		}
 
 		if(!this.state.email.includes('@smail.iitm.ac.in')) {
 			emailError="invalid smail";
@@ -64,7 +65,13 @@ export default class Form extends React.Component {
 			return false;
 		}
 
-		
+
+		if(this.state.password!==this.state.confirmpassword) {
+			confirmpasswordError="password does not match";
+		}
+		if(confirmpasswordError) {
+			this.setState({confirmpasswordError});
+			return false;
 		}
 
 		return true;
@@ -92,6 +99,7 @@ export default class Form extends React.Component {
 			<div style={{fontSize: 12, color: "red"}}> {this.state.emailError}</div>
 			<div><input name="password" placeholder="password" type="password" value={this.state.password} onChange={this.handleChangepassword} /></div>
 			<div><input name="confirmpassword" placeholder="confirmpassword" value={this.state.confirmpassword} onChange={this.handleChangeconfirmpassword} /></div>
+			<div style={{fontSize: 12, color: "red"}}> {this.state.confirmpasswordError}</div>
 			<div><button onClick={this.handleSubmit}>Submit</button></div>
 			</div>
 			);
