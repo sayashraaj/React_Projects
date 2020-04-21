@@ -53,7 +53,7 @@ export default class Form extends React.Component {
 		let confirmpasswordError="";
 
 		if(this.state.phone.length!==10) {		//count number of digits
-			phoneError="10 digit";
+			phoneError="phone number must have 10 digits";
 		}
 		if(phoneError) {
 			this.setState({phoneError});
@@ -103,14 +103,14 @@ export default class Form extends React.Component {
 		return(
 			
 			<div>
-			<div style={{backgroundColor: "#C95CE9"}}><input name="name" placeholder="name" value={this.state.name} onChange={this.handleChangename} /></div>
-			<div style={{backgroundColor: "#C96CE9"}}><input name="rollno" placeholder="roll number" value={this.state.rollno} onChange={this.handleChangerollno} /></div>
-			<div style={{backgroundColor: "#C97CE9"}}><input name="phone" placeholder="phone no" value={this.state.phone} onChange={this.handleChangephone} /></div>
+			<div style={{backgroundColor: "#C95CE9"}}><input name="name" placeholder="Name" value={this.state.name} onChange={this.handleChangename} /></div>
+			<div style={{backgroundColor: "#C96CE9"}}><input name="rollno" placeholder="Roll Number" value={this.state.rollno} onChange={this.handleChangerollno} /></div>
+			<div style={{backgroundColor: "#C97CE9"}}><input name="phone" placeholder="Phone No" value={this.state.phone} onChange={this.handleChangephone} /></div>
 			<div style={{fontSize: 12, color: "red"}}> {this.state.phoneError}</div>
-			<div style={{backgroundColor: "#C98CE9"}}><input name="email" placeholder="email id" value={this.state.email} onChange={this.handleChangeemail} /></div>
+			<div style={{backgroundColor: "#C98CE9"}}><input name="email" placeholder="Email Id" value={this.state.email} onChange={this.handleChangeemail} /></div>
 			<div style={{fontSize: 12, color: "red"}}> {this.state.emailError}</div>
-			<div style={{backgroundColor: "#C98CE1"}}><input name="password" placeholder="password" type="password" value={this.state.password} onChange={this.handleChangepassword} /></div>
-			<div style={{backgroundColor: "#C99CE3"}}><input name="confirmpassword" placeholder="confirmpassword" type="password" value={this.state.confirmpassword} onChange={this.handleChangeconfirmpassword} /></div>
+			<div style={{backgroundColor: "#C98CE1"}}><input name="password" placeholder="Password" type="password" value={this.state.password} onChange={this.handleChangepassword} /></div>
+			<div style={{backgroundColor: "#C99CE3"}}><input name="confirmpassword" placeholder="Confirmpassword" type="password" value={this.state.confirmpassword} onChange={this.handleChangeconfirmpassword} /></div>
 			<div style={{fontSize: 12, color: "red"}}> {this.state.confirmpasswordError}</div>
 			<div><button class="button-primary" onClick={this.handleSubmit}>Submit</button></div>
 			</div>
