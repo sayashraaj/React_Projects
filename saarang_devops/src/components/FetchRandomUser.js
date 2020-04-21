@@ -24,8 +24,8 @@ export default class FetchRandomUser extends React.Component {
     const url3 = url + data1.endpoint;                        //endpoint3 from endpoint2
     const response2 = await fetch(url3);
     const data2 = await response2.json();
-    const listing = data2.map(name=>{
-      return (
+    const listing = data2.map(name=>{                         //map function
+      return (                                                //Cards
         <div class="row">
         <div class="container">
         <div class="seven columns" style={{fontSize: 20, color: "black", backgroundColor: "#30C97D"}}>
