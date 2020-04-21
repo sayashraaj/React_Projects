@@ -26,7 +26,20 @@ export default class FetchRandomUser extends React.Component {
     const data2 = await response2.json();
     const listing = data2.map(name=>{
       return (
-        <li><div>{name.name} : {name.description}</div></li>
+        <div class="row">
+        <div class="container">
+        <div class="seven columns" style={{fontSize: 20, color: "black", backgroundColor: "#30C97D"}}>
+        {name.name}
+        </div>
+
+        <div class="six columns" style={{fontSize: 14, color: "blue", backgroundColor: "#1DC5F2"}}>
+        <div>..</div>
+        {name.description}
+        <div>..</div>
+        </div>
+        </div>
+        </div>
+        
         )
     });
     this.setState({listofnames: listing, loading: false});
@@ -39,9 +52,10 @@ export default class FetchRandomUser extends React.Component {
 
     return (
       <div>
-        <div>{this.state.movie}</div>
-        <div>{this.state.tv}</div>
-        <div>{this.state.listofnames}</div>
+        <div style={{fontSize: 20, color: "black", backgroundColor: "#F2DB1D"}}>{this.state.movie}</div>
+        <div style={{fontSize: 20, color: "black", backgroundColor: "#C98CE2"}}>{this.state.tv}</div>
+        <div><h2>Cards</h2></div>
+        <div >{this.state.listofnames}</div>
       </div>
     );
   }
