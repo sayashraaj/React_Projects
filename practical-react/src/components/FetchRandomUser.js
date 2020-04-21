@@ -25,8 +25,6 @@ export default class FetchRandomUser extends React.Component {
     const data2 = await response2.json();
     const listing = data2;
     this.setState({listofnames: listing, loading: false});
-
-    
   }
 
   render() {
@@ -38,10 +36,15 @@ export default class FetchRandomUser extends React.Component {
       return <div>didn't get a person</div>;
     }
 
+
+
     return (
       <div>
         <div>{this.state.movie}</div>
         <div>{this.state.tv}</div>
+
+
+
       </div>
     );
   }
