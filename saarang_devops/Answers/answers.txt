@@ -1,5 +1,6 @@
 SAYASH RAAJ CE19B113 SAARANG DEVOPS
 
+Q1)
 Website: moodi.org
 
 The website is very user friendly, with all the important links in the hompage in the format of a horizontal navigation bar, and buttons with font size greater than 12 px, making them more visible as soon as the website is loaded.
@@ -10,3 +11,15 @@ The logo is to the point, incites a feeling of being happy and being in a festiv
 Webpages take some time to lead initially, which is not a good sign for scaling a large website, which although, a simple college fest website like moodi.org does not need.
 Errors in the console log show proper 404 erros, which indicates error handling has been taken care of, possibly utilising catch and try.
 The performance is adequate, but as mentioned earlier, the webpages take some time to load initially with the loading image lasting for a few seconds before the webpage is displayed
+
+Q2)
+
+React App
+
+Q3)
+
+<  ***********  >
+
+Q4)
+
+I can dedicate as many hours as required for the team's work to progress and for the Saarang. This is my passion, and the work being done in this team, it doesn't feel tedious to me. To me, it is fun, as I am interested in DevOps and I want to learn more
