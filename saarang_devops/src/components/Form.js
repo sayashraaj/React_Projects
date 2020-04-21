@@ -54,7 +54,6 @@ export default class Form extends React.Component {
 		}
 		if(phoneError) {
 			this.setState({phoneError});
-			return false;
 		}
 
 		if(!this.state.email.includes('@smail.iitm.ac.in')) {
@@ -62,7 +61,6 @@ export default class Form extends React.Component {
 		}
 		if(emailError) {
 			this.setState({emailError});			//sets emailerror to invalid smail, else empty
-			return false;
 		}
 
 
@@ -71,6 +69,9 @@ export default class Form extends React.Component {
 		}
 		if(confirmpasswordError) {
 			this.setState({confirmpasswordError});
+		}
+
+		if(emailError || phoneError || confirmpasswordError) {
 			return false;
 		}
 
