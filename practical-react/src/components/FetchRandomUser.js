@@ -32,12 +32,6 @@ export default class FetchRandomUser extends React.Component {
       return <div>loading...</div>;
     }
 
-    if (!this.state.movie) {
-      return <div>didn't get a person</div>;
-    }
-
-
-
     return (
       <div>
         <div>{this.state.movie}</div>
