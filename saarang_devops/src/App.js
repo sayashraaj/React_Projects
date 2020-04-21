@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import FetchRandomUser from "./components/FetchRandomUser";
 import Form from "./components/Form";
 class App extends React.Component {
